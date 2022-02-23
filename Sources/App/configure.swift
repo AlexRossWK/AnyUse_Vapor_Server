@@ -21,6 +21,7 @@ public func configure(_ app: Application) throws {
             database: Environment.get("DATABASE_NAME") ?? "vapor_database"
         ), as: .psql)
     }
+    
 
     app.migrations.add(Flag.Create())
     app.migrations.add(Flag.AddDescriptionAndValue())
